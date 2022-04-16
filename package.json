@@ -1,0 +1,27 @@
+{
+  "name": "eventqrcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisGustavoCZP/EventQRCode.git"
+  },
+  "author": "Luis Gustavo C. Z. Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisGustavoCZP/EventQRCode/issues"
+  },
+  "homepage": "https://github.com/LuisGustavoCZP/EventQRCode#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "qrcode-generator": "^1.4.4"
+  }
+}

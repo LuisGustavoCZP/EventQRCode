@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root {
+    --back1: hsl(221, 79%, 60%);
+    --back2: hsl(221, 52%, 39%);
+    --back3: hsl(225, 13%, 18%);
+    --border1: hsl(0, 0%, 20%);
+    --title1: hsl(0, 0%, 88%);
+    --title2: hsl(221, 52%, 20%);
+    --title3: hsl(0, 0%, 20%);
+}
+
+body { 
+    display:flex; 
+    height:100vh; 
+    flex-direction:column; 
+    margin:0; padding: 0; 
+    justify-content:center; 
+    align-items:center;
+    background-color: var(--back1);
+}
+
+h1 
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 8em;
+    /* color: var(--title1); */
+    background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 2%;
+    user-select: none;
+}
+
+h2 
+{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    color: var(--title1);
+    user-select: none;
+}
+
+div, nav { 
+    display:flex; 
+    height:calc(100% - 1em); 
+    width:100%; 
+    justify-content: center;
+    align-items: center;
+}
+
+button.side { 
+    width: fit-content; 
+}
+
+.form, nav {
+    display:flex;
+    flex-direction: column;
+    width: 80%; 
+    height: fit-content;
+    border: 3px solid var(--border1);
+    background-color: var(--back2);
+    padding: 10px;
+}
+
+.form input {
+    display:flex; 
+    flex-grow: 1;
+    height: fit-content;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Poppins', sans-serif;
+    color: var(--title3);
+}
+
+::placeholder {
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    user-select: none;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    color: var(--title3);
+}
+
+.red
+{
+    color: red;
+}
+
+.green
+{
+    color: greenyellow;
+}
+
+.form h4 {
+    text-align: center;
+    font-family: 'Poppins', serif;
+    font-size: 1.5em;
+    text-shadow: 1px 1px black;
+    letter-spacing: 5px;
+}
+
+.form button {
+    background-color: var(--back3);
+    pointer-events: none;
+}
+
+.form button.enabled, nav button, button#b-back {
+    color: var(--title2);
+    background-color: var(--back1);
+    pointer-events: all;
+}
+
+.form > span {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.form > span > label {
+    padding-right: 10px;
+}
+
+.form button.enabled:hover, nav button:hover {
+    color: var(--title1);
+    background-color: var(--back2);
+}
+
+.form button, nav button {
+    display:flex; 
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+}
+
+#qrcode { 
+    display:flex; 
+    color: #333333;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff; 
+}
+
+#input-priv[value="50"] {
+    background: #AAAAAA;
+}
+
+#list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--back1);
+}
+
+#list > li {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--back3);
+    color: var(--title1);
+    padding: 10px;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#list > li:hover {
+    background-color: var(--back1);
+    color: var(--title3);
+}
+
+#modal {
+    display: block;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--back3);
+    color: var(--title1);
+}
+
+#modal.hidden {
+    display: none;
+}
+
+#modal.big {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--back3);
+    color: var(--title1);
+}
+
+#modal.big button {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+#show {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+#show div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#show div h2 {
+    font-size: 5em;
+}
+
+#show div p {
+    font-size: 3em;
+}
