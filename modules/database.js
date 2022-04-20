@@ -1,5 +1,4 @@
 const fs = require('fs');
-const fsp = require('fs/promises');
 
 let saving = false;
 const waitingSavers = [];
@@ -23,7 +22,7 @@ async function file (path)
                 fs.mkdir(path, () => {resolve();})
             }
         });
-    })
+    });
 }
 
 async function save (name, data)
@@ -41,7 +40,15 @@ async function write (name, data)
     await file('database');
     
     const filename = `database/${name}.json`;
-    await fsp.writeFile(filename, JSON.stringify(data));
+    await await new Promise(function(resolve, reject) {
+        fs.writeFile(filename, JSON.stringify(data), (e) => 
+        {
+            if(e)
+            {
+                resolve();
+            }
+        });
+    });
       
     if(waitingSavers.length > 0)
     {
